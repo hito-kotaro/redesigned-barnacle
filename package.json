@@ -4,6 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "up": "node_modules/.bin/sequelize db:migrate --env development",
+    "down": "node_modules/.bin/sequelize db:migrate:undo --env development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node src/server.ts",
     "dev:watch": "ts-node-dev --respawn src/server.ts",
