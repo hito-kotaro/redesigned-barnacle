@@ -20,10 +20,6 @@ const PORT = process.env.PORT || 5000;
 //   console.log('db connection success');
 // });
 
-app.get('/', (req: any, res: any) => {
-  res.send('hello');
-});
-
 // app.get('/test', (req: any, res: any) => {
 //   res.send({ message: 'test' });
 // });
@@ -34,6 +30,11 @@ app.get('/', (req: any, res: any) => {
 //     res.send(results);
 //   });
 // });
+
+app.get('/', (req: any, res: any) => {
+  console.log('hello');
+  res.send('hello');
+});
 
 console.log(PORT);
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
