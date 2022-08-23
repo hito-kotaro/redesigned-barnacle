@@ -8,6 +8,7 @@ const app = (0, express_1.default)();
 // jsonデータを扱う
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
+console.log('START SERVER');
 // テスト用のエンドポイント
 app.get('/', (req, res) => {
     res.status(200).send({ message: 'hello, api sever!' });
