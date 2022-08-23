@@ -24,6 +24,10 @@ connection.connect((err: any) => {
 //   res.send('hello');
 // });
 
+app.get('/test', (req: any, res: any) => {
+  res.send({ message: 'test' });
+});
+
 app.get('/', (req: any, res: any) => {
   connection.query('SELECT * FROM users', (error: any, results: any) => {
     console.log(results);
