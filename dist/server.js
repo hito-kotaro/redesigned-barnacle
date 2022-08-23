@@ -10,23 +10,26 @@ const connection = mysql.createConnection({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
 });
-connection.connect((err) => {
-    if (err) {
-        console.log('error connecting: ' + err.stack);
-        console.log('db connection false');
-        return;
-    }
-    console.log('db connection success');
-});
+// connection.connect((err: any) => {
+//   if (err) {
+//     console.log('error connecting: ' + err.stack);
+//     console.log('db connection false');
+//     return;
+//   }
+//   console.log('db connection success');
+// });
 // app.get('/', (req: any, res: any) => {
 //   res.send('hello');
 // });
-app.get('/', (req, res) => {
-    connection.query('SELECT * FROM users', (error, results) => {
-        console.log(results);
-        res.send(results);
-    });
+app.get('/test', (req, res) => {
+    res.send({ message: 'test' });
 });
+// app.get('/', (req: any, res: any) => {
+//   connection.query('SELECT * FROM users', (error: any, results: any) => {
+//     console.log(results);
+//     res.send(results);
+//   });
+// });
 console.log(PORT);
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 //# sourceMappingURL=server.js.map
