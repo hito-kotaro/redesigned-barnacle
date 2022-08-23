@@ -1,8 +1,12 @@
 {
-  "name": "ts-node-template",
+  "name": "drcmquest",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
+  "engines": {
+    "node": "16.13.x",
+    "npm": "8.1.0"
+  },
   "scripts": {
     "up": "node_modules/.bin/sequelize db:migrate --env development",
     "down": "node_modules/.bin/sequelize db:migrate:undo --env development",
