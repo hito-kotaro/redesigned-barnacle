@@ -4,12 +4,12 @@ const express = require('express');
 const mysql = require('mysql2');
 const app = express();
 const PORT = process.env.PORT || 5000;
-const connection = mysql.createConnection({
-    host: process.env.DB_HOSTNAME,
-    user: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-});
+// const connection = mysql.createConnection({
+//   host: process.env.DB_HOSTNAME,
+//   user: process.env.DB_USERNAME,
+//   password: process.env.DB_PASSWORD,
+//   database: process.env.DB_NAME,
+// });
 // connection.connect((err: any) => {
 //   if (err) {
 //     console.log('error connecting: ' + err.stack);
@@ -18,12 +18,12 @@ const connection = mysql.createConnection({
 //   }
 //   console.log('db connection success');
 // });
-// app.get('/', (req: any, res: any) => {
-//   res.send('hello');
-// });
-app.get('/test', (req, res) => {
-    res.send({ message: 'test' });
+app.get('/', (req, res) => {
+    res.send('hello');
 });
+// app.get('/test', (req: any, res: any) => {
+//   res.send({ message: 'test' });
+// });
 // app.get('/', (req: any, res: any) => {
 //   connection.query('SELECT * FROM users', (error: any, results: any) => {
 //     console.log(results);
