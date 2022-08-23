@@ -1,14 +1,17 @@
-require('dotenv').config();
-const express = require('express');
-const mysql = require('mysql2');
+import express from 'express';
+
 const app = express();
-const PORT = process.env.PORT || 5000;
+// jsonデータを扱う
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-console.log('START SERVER');
-
-app.get('/', (req: any, res: any) => {
-  res.send('hello');
+// テスト用のエンドポイント
+app.get('/', (req, res) => {
+  res.status(200).send({ message: 'hello, api sever!' });
 });
 
-console.log(PORT);
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+// サーバー接続
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log('listen on port:', port);
+});
