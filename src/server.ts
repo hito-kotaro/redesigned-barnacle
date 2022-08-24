@@ -8,6 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 console.log({ message: 'hello, api sever!' });
 // テスト用のエンドポイント
 app.get('/', (req, res) => {
+  console.log('listen on port:', port);
   res.status(200).send({ message: 'hello, api sever!' });
 });
 
