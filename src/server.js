@@ -5,5 +5,6 @@ const PORT = process.env.PORT || 5000;
 app.get('/', (req, res) => {
   res.send('hello');
 });
-console.log(PORT);
+
+console.log('start js');
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
