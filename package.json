@@ -16,7 +16,7 @@
     "clean": "rimraf dist/*",
     "tsc": "tsc",
     "build": "npm-run-all clean tsc",
-    "start": "node src/server.js",
+    "start": "node dist/server.js",
     "check-types": "tsc --noEmit",
     "eslint:fix": "eslint src/**/*.ts --fix",
     "eslint": "eslint src/**/*.ts",
