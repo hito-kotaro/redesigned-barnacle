@@ -2,7 +2,7 @@
   "name": "drcmquest",
   "version": "0.1.0",
   "description": "",
-  "main": "server.js",
+  "main": "dist/server.js",
   "engines": {
     "node": "16.13.x",
     "npm": "8.1.0"
@@ -16,7 +16,7 @@
     "clean": "rimraf dist/*",
     "tsc": "tsc",
     "build": "npm-run-all clean tsc",
-    "start": "node server.js",
+    "start": "node dist/server.js",
     "check-types": "tsc --noEmit",
     "eslint:fix": "eslint src/**/*.ts --fix",
     "eslint": "eslint src/**/*.ts",
