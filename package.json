@@ -2,7 +2,7 @@
   "name": "drcmquest",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/server.js",
+  "main": "server.js",
   "engines": {
     "node": "16.13.x",
     "npm": "8.1.0"
