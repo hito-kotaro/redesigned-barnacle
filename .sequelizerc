@@ -1,0 +1,5 @@
+module.exports = {
+  config: 'src/infra/db/config.js',
+  'migrations-path': 'src/infra/db/migrations',
+  'seeders-path': 'src/infra/db/seeders',
+};
