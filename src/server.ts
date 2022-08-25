@@ -1,5 +1,4 @@
 require('dotenv').config();
-const hoge = require('./auth.ts');
 import express from 'express';
 const request = require('request');
 const mysql = require('mysql2');
@@ -34,7 +33,6 @@ app.get('/account', (req: any, res: any) => {
 
 // テスト用のエンドポイント
 app.get('/', (req, res) => {
-  hoge.sayHello();
   res.status(200).send({ message: 'hoge' });
 });
 
