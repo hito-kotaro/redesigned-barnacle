@@ -8,23 +8,11 @@
     "npm": "8.1.0"
   },
   "scripts": {
-    "db:up": "node_modules/.bin/sequelize db:migrate --env development --config src/infra/db/config/config.json",
-    "db:down": "node_modules/.bin/sequelize db:migrate:undo --env development --config src/infra/db/config/config.json",
-    "db:up:prod": "node_modules/.bin/sequelize db:migrate --env production --config src/infra/db/config/config.json",
-    "db:down:prod": "node_modules/.bin/sequelize db:migrate:undo --env production --config src/infra/db/config/config.json",
+    "db:up": "node_modules/.bin/sequelize db:migrate --env database --config src/infra/db/config/config.json",
+    "db:down": "node_modules/.bin/sequelize db:migrate:undo --env database --config src/infra/db/config/config.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node src/server.ts",
-    "dev:watch": "ts-node-dev --respawn src/server.ts",
-    "clean": "rimraf dist/*",
-    "tsc": "tsc",
-    "build": "npm-run-all clean tsc",
-    "start": "ts-node src/server.ts",
-    "check-types": "tsc --noEmit",
-    "eslint:fix": "eslint src/**/*.ts --fix",
-    "eslint": "eslint src/**/*.ts",
-    "format": "prettier --write 'src/**/*.{js,ts,json}'",
-    "lint": "npm-run-all eslint check-types format",
-    "lint:fix": "npm-run-all eslint check-types format"
+    "dev": "nodemon  --exec ts-node src/server.ts",
+    "start": "nodemon  --exec ts-node src/server.ts"
   },
   "keywords": [],
   "author": "",

@@ -1,8 +1,5 @@
 {
-  "development": {
-    "use_env_variable": "DATABASE_URL"
-  },
-  "production": {
+  "database": {
     "use_env_variable": "DATABASE_URL"
   }
 }
