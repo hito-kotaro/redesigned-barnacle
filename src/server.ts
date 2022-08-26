@@ -1,7 +1,8 @@
 require('dotenv').config();
-import express from 'express';
-const request = require('request');
-const mysql = require('mysql2');
+import express, { request } from 'express';
+import mysql from 'mysql2';
+// const request = require('request');
+// const mysql = require('mysql2');
 const app = express();
 // jsonデータを扱う
 app.use(express.json());
