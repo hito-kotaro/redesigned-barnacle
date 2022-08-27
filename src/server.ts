@@ -1,8 +1,8 @@
 require('dotenv').config();
+import ServerlessHttp from 'serverless-http';
+// const serverless = require('serverless-http');
 import express, { request } from 'express';
 import mysql from 'mysql2';
-// const request = require('request');
-// const mysql = require('mysql2');
 const app = express();
 // jsonデータを扱う
 app.use(express.json());
@@ -42,3 +42,5 @@ const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log('listen on port:', port);
 });
+
+module.exports.handler = ServerlessHttp(app);
